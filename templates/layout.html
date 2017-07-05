@@ -1,7 +1,10 @@
 <!doctype html>
 <html>
   <head>
-    <title>Search engine</title>
+    <title>Keyword mining tool - Byprog</title>
+
+    <meta name="description" content="Extract keywords from a text or a web page."/>
+
     <style>[dir='ltr'],[dir='rtl']{
       unicode-bidi:-webkit-isolate;
       unicode-bidi:isolate}
@@ -2670,8 +2673,10 @@
         padding-top:6px}
     </style>
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
   <body class="srp tbo vasq" marginheight="3" topmargin="3" id="gsr">
     <div data-jiis="cc" id="doc-info">
     </div>
@@ -4078,6 +4083,7 @@
                       <g-header-menu class="hdtb-mitem _eMq r-iUXJ_3aR_5z4" id="ab_options" jsl="$t t-Nfexb0d83t0;$x 0;">
                       <a class="_bMq iUXJ_3aR_5z4-_UwgkgYBDrI hdtb-dd-b" aria-haspopup="true" role="button" tabindex="0" jsaction="r.mSRaIWm1OeU" data-rtid="iUXJ_3aR_5z4" jsl="$x 1;" href="https://www.byprog.com/en" target="_blank">Byprog</a>
                       <a class="_bMq iUXJ_3aR_5z4-_UwgkgYBDrI hdtb-dd-b" aria-haspopup="true" role="button" tabindex="0" jsaction="r.mSRaIWm1OeU" data-rtid="iUXJ_3aR_5z4" jsl="$x 1;" href="https://github.com/AnthonySigogne/keyword-mining" target="_blank">About this tool</a>
+                      <a class="_Gs" href="#" data-toggle="modal" data-target="#myModal">Help</a>
                     </div>
                   </div>
                   <ol id="ab_ctls">
@@ -4085,6 +4091,32 @@
                 </div>
               </div>
               <div class="hdtb-td-c hdtb-td-h" aria-expanded="false" id="hdtbMenus" tabindex="0">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Keyword mining tool</h4>
+              </div>
+              <div class="modal-body">
+                Extract keywords from a text or a web page.
+                <br/><br/>
+                <b>How it works</b><br/>
+                The algorithm extracts all nominal groups (candidate keywords) from the text
+                and, for each one, attributes a score based on multiple parameters including the number of occurrences.
+                <br/>
+                The final list of keywords is composed of best-scored candidates.
+                <br/><br/>
+                <b>Note</b>
+                <br/>For the moment, this tool works only for English and French content.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>

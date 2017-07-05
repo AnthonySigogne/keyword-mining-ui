@@ -45,13 +45,17 @@ def keywords_from_url():
         except :
             return "Error, check your installation"
 
-        # show the list of keywords
-        data = r.json()
-        return render_template('layout.html',
-            url=url,
-            total=data["total"],
-            response_time=r.elapsed.total_seconds(),
-            keywords=data["keywords"])
+        if r.status_code == requests.codes.ok :
+            # show the list of keywords
+            data = r.json()
+            return render_template('layout.html',
+                url=url,
+                total=data["total"],
+                response_time=r.elapsed.total_seconds(),
+                keywords=data["keywords"])
+        else :
+            # error for this url (invalid link, no content,...)
+            return render_template('layout-empty.html', error=True, url=url)
 
     # return homepage (no query)
     return render_template('layout-empty.html')
